@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-airbyte" %}
-{% set version = "2.1.4" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-airbyte-{{ version }}.tar.gz
-  sha256: 8bdf9ffaa410c488aa1b54a60b01976f3e6fb00ef254410b624c9a40671ba34d
+  sha256: f0cd5eec17a4975ab525208fe8949402e3f341890aa05978011cececcc3c3eb5
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ about:
   home: https://airflow.apache.org/
   summary: Provider for Apache Airflow. Implements apache-airflow-providers-airbyte package
   license: Apache-2.0
-  license_file: 
+  license_file:
     - LICENSE
     - NOTICE
   license_family: Apache
