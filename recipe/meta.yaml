@@ -21,13 +21,13 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.2.0
     - apache-airflow-providers-http
+    - apache-airflow >=2.3.0
 
 test:
   imports:
     - airflow.providers.airbyte
-    - airflow.providers.airbyte.example_dags
+    - airflow.providers.airbyte.hooks
   commands:
     - pip check
   requires:
