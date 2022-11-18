@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-airbyte" %}
-{% set version = "3.1.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-airbyte-{{ version }}.tar.gz
-  sha256: a489e5395945a81ae70985ac9d2d4113238ea5b573b32771dd77df79ef8ebe4b
+  sha256: 8e8d60466ef7769b316d6e00a316032cec447227fdd0abefc8b8fd2b81bcf044
 
 build:
   noarch: python
@@ -21,13 +21,13 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.2.0
     - apache-airflow-providers-http
+    - apache-airflow >=2.3.0
 
 test:
   imports:
     - airflow.providers.airbyte
-    - airflow.providers.airbyte.example_dags
+    - airflow.providers.airbyte.hooks
   commands:
     - pip check
   requires:
