@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-airbyte" %}
-{% set version = "3.2.1" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-airbyte-{{ version }}.tar.gz
-  sha256: 9f551d0d76d85997d81a1d49ebdaf895f14e19709d853661febe9c6f258436d5
+  sha256: 2ec739f457a55bfad728a4f5bdb70cbca5391540039f816612b87c0650b98750
 
 build:
   noarch: python
