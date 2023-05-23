@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.7
     - apache-airflow-providers-http
-    - apache-airflow >=2.3.0
+    - apache-airflow >=2.4.0
 
 test:
   imports:
