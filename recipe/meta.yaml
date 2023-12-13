@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_airbyte-{{ version }}.tar.gz
   sha256: 484c215d7a6a9d1b8fa10f6e7b4280d84c042ff9e7f9d214aa1f99c016dd5049
 
 build:
@@ -16,30 +16,27 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
     - apache-airflow-providers-http
-    - apache-airflow >=2.5.0
+    - apache-airflow >=2.6.0
 
 test:
   imports:
     - airflow.providers.airbyte
-    - airflow.providers.airbyte.hooks
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-airbyte package
+  home: https://github.com/apache/airflow/
+  summary: Provider package apache-airflow-providers-airbyte for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/airbyte/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-airbyte/stable/index.html
   dev_url: https://github.com/apache/airflow/
