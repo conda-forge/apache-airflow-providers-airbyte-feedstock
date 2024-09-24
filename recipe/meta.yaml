@@ -20,8 +20,8 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
-    - airbyte-api >=0.52.0
     - python >=3.8
+    - airbyte-api >=0.52.0
     - apache-airflow-providers-http
     - apache-airflow >=2.8.0
 
