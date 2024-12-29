@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-airbyte" %}
-{% set version = "4.0.0" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_airbyte-{{ version }}.tar.gz
-  sha256: 516b448fcebc8215fac808b053f7088983f279eb13db633558b28969b08d4bc1
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_airbyte-{{ version }}.tar.gz
+  sha256: d0a4b2dbaf44f82bc3f1d17266eb1566ffc70717020ab8a4fc2fb10b46efe739
 
 build:
   noarch: python
@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.0
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }},<4.dev0
     - airbyte-api >=0.52.0
-    - apache-airflow >=2.8.0
+    - apache-airflow >=2.9.0
 
 test:
   imports:
@@ -30,6 +30,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
