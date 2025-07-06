@@ -1,5 +1,6 @@
 {% set name = "apache-airflow-providers-airbyte" %}
 {% set version = "5.2.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
