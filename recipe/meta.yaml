@@ -21,9 +21,9 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
-    - apache-airflow-providers-common-compat >=1.8.0
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
+    - apache-airflow-providers-common-compat >=1.8.0
     - airbyte-api >=0.52.0
     - requests >=2.32.0
 
