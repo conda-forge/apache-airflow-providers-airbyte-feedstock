@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-airbyte" %}
 {% set version = "5.2.5" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -40,7 +39,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-airbyte for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/airbyte/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-airbyte/stable/index.html
   dev_url: https://github.com/apache/airflow/
