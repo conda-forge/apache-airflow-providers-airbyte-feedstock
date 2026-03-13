@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-airbyte
-  version: "5.3.2"
+  version: "5.3.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_airbyte-${{ version }}.tar.gz
-  sha256: ce726facf773c8a281f8f0e591b4c1f78c7c803e3d986ec17a888baa2020ed63
+  sha256: 3e0d803127927e36780917b04a043b3cb64e13bb6d376060cdcec6a6fd9d7dcb
 
 build:
   noarch: python
