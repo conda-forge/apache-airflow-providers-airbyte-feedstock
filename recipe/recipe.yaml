@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-airbyte
-  version: "5.5.1"
+  version: "5.5.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_airbyte-${{ version }}.tar.gz
-  sha256: c8e5d6a23b7d5431efc26ea06fd583e86c7c721b07089152407fce9d925791c1
+  sha256: 6353570a272b9ab8ba6e755cf8a348b40e4f243761ca586d40820ae8a550702b
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.12.0
-    - airbyte-api >=0.52.0
+    - airbyte-api >=0.52.0,<1.0.0
     - requests >=2.32.0
 
 tests:
